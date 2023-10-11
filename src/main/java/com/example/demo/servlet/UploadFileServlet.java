@@ -7,7 +7,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -32,10 +31,10 @@ public class UploadFileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Part filePart = req.getPart("file");
-        String fileName = getFileName(filePart);
-        filePart.write("part/to/your/upload" + fileName);
-        resp.getWriter().println("file upload successfully");
+        //Part filePart = req.getPart("file");
+        //String fileName = getFileName(filePart);
+        //filePart.write("part/to/your/upload" + fileName);
+        //resp.getWriter().println("file upload successfully");
     }
 
 }
