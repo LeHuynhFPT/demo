@@ -50,6 +50,23 @@
         <url-pattern>/hello-servlet</url-pattern>
         <url-pattern>/demo-servlet</url-pattern>
     </filter-mapping>
+    <servlet>
+        <servlet-name>demoJsp</servlet-name>
+        <jsp-file>/demoJsp.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demoJsp</servlet-name>
+        <url-pattern>/demo-jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>StudentController</servlet-name>
+        <servlet-class>com.example.demo.StudentController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentController</servlet-name>
+        <url-pattern>/StudentController</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

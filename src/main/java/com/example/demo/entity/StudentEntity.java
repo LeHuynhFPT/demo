@@ -1,33 +1,37 @@
 package com.example.demo.entity;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "customer")
-public class CustomerEntity implements Serializable {
+@Table(name = "student")
+public class StudentEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
+    private Integer id;
     private String name;
     private Integer age;
     private String address;
+    private String phone;
 
-    public CustomerEntity(Integer id, String name, Integer age, String address) {
+    public StudentEntity(Integer id, String name, Integer age, String address, String phone){
         this.id = id;
         this.name = name;
         this.age = age;
         this.address = address;
+        this.phone = phone;
     }
+    public StudentEntity(){
 
-    public CustomerEntity() {
     }
-
-    public CustomerEntity(String name, Integer age, String address) {
+    public StudentEntity(String name, Integer age, String address, String phone){
         this.name = name;
         this.age = age;
         this.address = address;
+        this.phone = phone;
+
     }
 
     public Integer getId() {
@@ -60,5 +64,13 @@ public class CustomerEntity implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
